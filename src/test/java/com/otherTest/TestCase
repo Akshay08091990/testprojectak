@@ -1,0 +1,39 @@
+Testcases for prime number-
+
+1. Verify if user enter valid number between 1 to 100
+2. Verify if user enter enter zero
+3. verify if user enter decimal number
+4. Verify if user enter boundary value numbers such as 1,99,100,101
+5. Verify if user enter negative number
+6. Verify if user invalid characters
+=================================================================================================================
+
+Write all the possible test scenarios “To apply Promo code”.
+
+1. Verify if new user enter promo code to avail the discount for the first transaction
+2. Verify the above user enter the same promo code to avail the discount for second transaction
+3. Verify when another user enter the above promo code to avail the discount
+4. Verify when new user does not enter promo code correctly
+5. Verify when user does not enter anything and click on apply button
+6. Verify if new user open the page on two different tabs or browser, enter the same code and click on apply for first transaction
+7. Verify after entering promo code for first time user receive discount of 30%
+8. Verify promo code will apply to transaction greater than or equal to 1000. 
+9. Verify if user transaction amount is 999.99 and user apply promo code 
+10. Verify when user enter promo code with character equal to 7
+11. Verify when user enter promo code with character greater than 7
+12. Verify user should not receive discount more than 300rs.
+
+====================================================================================================================
+
+
+Sql Query:
+
+a> Write an SQL query to find nth largest salary along with employee name.
+	
+	SELECT emp.EmpName, sal.salary FROM Employee emp left outer join salary sal on emp.empid =sal.empid ORDER BY salary DESC LIMIT N-1, 1;
+
+b> Write a query to update salary of employees to 5000 whose age is 30+
+
+	UPDATE salary SET salary =5000 where empID in (SELECT empid FROM employee where (year(getdate())-year(Date_of_birth)) > 30);
+
+
